@@ -1,0 +1,13 @@
+version: "3.5"
+services:
+    error404:
+        container_name: error404
+        build: .
+        restart: always
+        networks:
+            - error-net
+        ports:
+            - 6666:80
+networks:
+    error-net:
+        name: error-net
